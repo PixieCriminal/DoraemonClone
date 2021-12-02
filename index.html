@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene background="color: #000000">
+
+        <!--Camera-->
+        <a-entity position="0 0 15">
+            <a-camera></a-camera>
+        </a-entity>
+
+
+        <!--body-->
+        <a-entity>
+            <a-box position="0 2.5 -5" height="4" width="4" color="#efb46f"></a-box>
+        </a-entity>
+
+        <!--neck-->
+        <a-entity>
+            <a-box position="0 5.5 -5" height="3" width="1" color="#87755f"></a-box>
+        </a-entity>
+
+        <!--left eye socket -->
+        <a-entity>
+            <a-tetrahedron position="-2 7.5 -5" radius="-2" color="grey"></a-tetrahedron>
+        </a-entity>
+
+        <!--left eye ball-->
+        <a-entity animation = "property: rotation; from: 0 0 -5; to: -3 0 -5;dir: alternate; loop: true; dur: 1000">
+            <a-sphere position="-3 8 -5" radius="0.6" color="black"></a-sphere>
+        </a-entity>
+
+       
+
+        <!--right eye ball-->
+        <a-entity animation = "property: rotation; from: 0 8 -5; to: 4 8 -5;dir: alternate; loop: true; dur: 1000">
+            <a-sphere position="1.5 8 -5" radius="0.6" color="black"></a-sphere>
+        </a-entity>
+
+         <!--right eye socket -->
+         <a-entity>
+            <a-tetrahedron position="2 7.5 -5" radius="2" color="grey"></a-tetrahedron>
+        </a-entity>
+
+        <!--left leg-->
+        <a-entity>
+            <a-box position="-3 -1 -5" height="3" width="3" color="#3e1911"></a-box>
+        </a-entity>
+
+        <!--right leg-->
+        <a-entity>
+            <a-box position="3 -1 -5" height="3" width="3" color="#3e1911"></a-box>
+        </a-entity>
+
+         <!--antenna-->
+         <a-entity animation = "property: rotation; from: .5 8 -5; to: .5 12 -5;dir: alternate; loop: true; dur: 1000">
+            <a-box position=".5 10.5 -5" height="4" width=".4" color="orange"></a-box>
+            <a-sphere position=".5 12.5 -5" radius=".5" color="orange"></a-sphere>
+        </a-entity>
+
+    </a-scene>
+</body>
+
+</html>
